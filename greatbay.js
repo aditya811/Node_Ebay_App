@@ -1,7 +1,9 @@
+var inquirer = require('inquirer')
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
   host: "localhost",
+  //socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
 
   // Your port; if not 3306
   port: 3306,
@@ -17,15 +19,32 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
   if (err) throw err;
   console.log("connected as id " + connection.threadId + "\n");
-  createProduct();
+  startAuction();
 });
 
-var action = process.argv[2];
+function startAuction() {
+}
 
-if (action==="post") {
- console.log(action);
-};
+function postAnItem() {
 
-if (action==="bid") {
-  console.log(action);
-};
+}
+
+function postDB() {
+
+}
+
+function displayDB() {
+  
+}
+
+function bid() {
+  
+}
+
+function updateBid() {
+ 
+}
+
+function checkBid() {
+ 
+}
